@@ -7,7 +7,6 @@ import Header from "@/components/Header";
 import { Toaster } from "sonner";
 import Footer from "@/components/Footer";
 import NextTopLoader from "nextjs-toploader";
-import BackgroundAnimation from "@/components/ui/BackgroundAnimation";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,13 +16,11 @@ const geistSans = localFont({
 
 export const metadata = {
   title: "Vanathi - Fullstack Developer",
-  icons: {
-    icon: "/logo2.png",
+  icons:{
+icon: "/logo2.png"
   },
-  description:
-    "Experienced fullstack developer specializing in modern web technologies. View my projects, skills, and experience.",
-  keywords:
-    "fullstack developer,backend developer, frontend developer, web development, JavaScript,JS, C#, CSharp, React, Node.js, portfolio",
+  description: "Experienced fullstack developer specializing in modern web technologies. View my projects, skills, and experience.",
+  keywords: "fullstack developer,backend developer, frontend developer, web development, JavaScript,JS, C#, CSharp, React, Node.js, portfolio",
   author: "Vanathi",
   robots: "index, follow",
 };
@@ -31,27 +28,29 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body
+        className={`${geistSans.className} antialiased`}
+      >
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <BackgroundAnimation />
-          <div className="relative z-[1]">
-            <Header />
-            {/* <NextTopLoader /> */}
-            {children}
-            <Footer />
-            <Toaster
-              position="top-right"
-              toastOptions={{
-                className:
-                  "font-semibold backdrop-blur-md text-black rounded-3xl",
-              }}
-            />
-          </div>
+
+          <NextTopLoader />
+          <Header />
+
+          {children}
+
+          <Footer />
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              className: 'font-semibold backdrop-blur-md text-black rounded-3xl',
+            }}
+          />
 
           <GridPattern
             width={200}
@@ -59,7 +58,7 @@ export default function RootLayout({ children }) {
             x={-1}
             y={-1}
             className={cn(
-              "[mask-image:linear-gradient(to_bottom,white,transparent)]"
+              "[mask-image:linear-gradient(to_bottom,white,transparent)]",
             )}
           />
         </ThemeProvider>

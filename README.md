@@ -1,6 +1,6 @@
 ![Thumbnail ](images/Thumbnail.png)
 
-# Vanathi - Portfolio Website
+# Huzaif Ahmed - Portfolio Website
 
 A modern and responsive portfolio website to showcase my projects, skills, and experiences. Built with Next.js and styled using Tailwind CSS, this portfolio provides a seamless user experience with smooth animations and an organized layout.
 
@@ -29,13 +29,13 @@ A modern and responsive portfolio website to showcase my projects, skills, and e
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/VanathiS06/Vanathi_Portfolio.git
+   git clone https://github.com/huzaifahmedz/portfolio-website.git
    ```
 
 2. Navigate into the project directory:
 
    ```bash
-   cd Vanathi_Portfolio
+   cd portfolio-website
    ```
 
 3. Install dependencies:
@@ -50,3 +50,6 @@ A modern and responsive portfolio website to showcase my projects, skills, and e
    npm run dev
    ```
 
+
+
+![Demo](images/Screenshot_1.png)

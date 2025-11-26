@@ -102,21 +102,53 @@ const Navigation = ({ isMobile = false, onLinkClick }) => (
     </motion.nav>
 );
 
+// const ContactButton = ({ isMobile = false, onLinkClick }) => (
+//     <motion.div
+//         className={`flex items-center ${isMobile ? 'w-full justify-center mt-4' : 'space-x-6'}`}
+//         initial={{ opacity: 0, x: isMobile ? 0 : 20 }}
+//         animate={{ opacity: 1, x: 0 }}
+//         transition={{ delay: isMobile ? 0.5 : 0.4, duration: 0.5 }}
+//         onClick={onLinkClick}
+//     >
+//         <Link href={"https://github.com/VanathiS06"} target='_blank' className={isMobile ? 'w-full' : ''}>
+//             <Button className={`${isMobile ? 'w-full' : ''} rounded-2xl font-semibold bg-white text-gray-900 hover:bg-gray-200 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3`}>
+//                 <span className="hidden sm:inline">Repo Inside!</span>
+//                 <span className="sm:hidden">Template</span>
+//             </Button>
+//         </Link>
+//          <Link href="/Vanathi_CV.pdf" target='_blank' download className={isMobile ? 'w-full' : ''}>
+//             <Button className={`${isMobile ? 'w-full' : ''} rounded-2xl font-semibold bg-secondary text-white hover:bg-secondary/80 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3`}>
+//                 <span className="hidden sm:inline">Download CV</span>
+//                 <span className="sm:hidden">CV</span>
+//             </Button>
+//         </Link>
+//     </motion.div>
+// );
+
 const ContactButton = ({ isMobile = false, onLinkClick }) => (
-    <motion.div
-        className={`flex items-center ${isMobile ? 'w-full justify-center mt-4' : 'space-x-6'}`}
-        initial={{ opacity: 0, x: isMobile ? 0 : 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: isMobile ? 0.5 : 0.4, duration: 0.5 }}
-        onClick={onLinkClick}
-    >
-        <Link href={"https://github.com/Vanathi06"} target='_blank' className={isMobile ? 'w-full' : ''}>
-            <Button className={`${isMobile ? 'w-full' : ''} rounded-2xl font-semibold bg-white text-gray-900 hover:bg-gray-200 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3`}>
-                <span className="hidden sm:inline">Repo Inside!</span>
-                <span className="sm:hidden">Template</span>
-            </Button>
-        </Link>
-    </motion.div>
+  <motion.div
+    className={`flex ${isMobile ? 'flex-col w-full space-y-3 mt-4' : 'flex-row items-center space-x-4'}`}
+    initial={{ opacity: 0, x: isMobile ? 0 : 20 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ delay: isMobile ? 0.5 : 0.4, duration: 0.5 }}
+    onClick={onLinkClick}
+  >
+    {/* GitHub Repo Button */}
+    <Link href={"https://github.com/VanathiS06"} target="_blank" className={isMobile ? 'w-full' : ''}>
+      <Button className={`${isMobile ? 'w-full' : ''} rounded-2xl font-semibold bg-white text-gray-900 hover:bg-gray-200 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3`}>
+        <span className="hidden sm:inline">Repo Inside!</span>
+        <span className="sm:hidden">Template</span>
+      </Button>
+    </Link>
+
+    {/* Download CV Button */}
+    <Link href="/Vanathi_Resume.pdf" target="_blank" download className={isMobile ? 'w-full' : ''}>
+      <Button className={`${isMobile ? 'w-full' : ''} rounded-2xl font-semibold bg-secondary text-white hover:bg-secondary/80 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3`}>
+        <span className="hidden sm:inline">Download Resume</span>
+        <span className="sm:hidden">Resume</span>
+      </Button>
+    </Link>
+  </motion.div>
 );
 
 const Header = () => {
@@ -138,7 +170,8 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <div className="container mx-auto flex items-center justify-between md:px-64 px-4 sm:px-6">
+                <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-12">
+                {/* <div className="container mx-auto flex items-center justify-between md:px-64 px-4 sm:px-6"> */}
                     <Logo />
                     <Navigation />
                     <div className="hidden md:block">
